@@ -18,8 +18,8 @@
     # config = { plugins.lualine.tabline.lualine_a = [ "tabs" ]; };
 
     # But both of these fail
-    config = { plugins.lualine.tabline.lualine_a = { 0 = "tabs"; mode = 2 }; };
-    # config = { plugins.lualine.tabline.lualine_a = { "0" = "tabs"; mode = 2 }; };
+    config = { plugins.lualine.tabline.lualine_a = [{0 = "tabs"; mode = 2}]; };
+    # config = { plugins.lualine.tabline.lualine_a = [{"0" = "tabs"; mode = 2}]; };
   in
     flake-utils.lib.eachDefaultSystem (system: let
       nixvim' = nixvim.legacyPackages."${system}";
